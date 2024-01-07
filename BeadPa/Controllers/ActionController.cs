@@ -7,7 +7,7 @@ namespace BeadPa
 	{
 		bool isActiv = true;
         StudentService sS = new StudentService(); 
-        //CourseService cS = new CourseService();
+        CourseService cS = new CourseService();
         //InstructorService iS = new InstructorService();
 
         public ActionController(){}
@@ -24,7 +24,7 @@ namespace BeadPa
                     WAction(sS);
                     break;
                 case "2":
-                   // WAction(cS);
+                    WAction(cS);
                     break;
                 case "3":
                     //WAction(iS);

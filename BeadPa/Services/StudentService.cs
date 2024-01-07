@@ -8,25 +8,31 @@ namespace BeadPa
         public void Add()
         {
             string name = Util.Read("Name: ");
-            DateTime birthDate = Util.ReadDate("Birth date: ");
+            DateTime birthDate = Util.ReadDate("Birth date (yyyy.mm.dd): ");
             Student student = new Student(name, birthDate);
             students.Add(student);
         }
 
         public void Remove()
         {
+            Util.Clear();
+            Util.Print("All student:");
+            listAll();
             string name = Util.Read("Name: ");
             students.RemoveAll(s => s.Name == name);
         }
 
         public void Update()
         {
+            Util.Clear();
+            Util.Print("All student:");
+            listAll();
             string name = Util.Read("Name: ");
             Student student = students.Find(s => s.Name == name);
             if (student != null)
             {
                 string newName = Util.Read("New name: ");
-                DateTime newBirthDate = Util.ReadDate("New birth date: ");
+                DateTime newBirthDate = Util.ReadDate("New birth date (yyyy.mm.dd): ");
                 student.Name = newName;
                 student.BirthDate = newBirthDate;
             }
