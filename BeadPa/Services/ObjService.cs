@@ -6,7 +6,7 @@ namespace BeadPa
         void Add();
         void Remove();
         void Update();
-        List<Obj> ListAll();
+        void ListAll();
     }
 }
 

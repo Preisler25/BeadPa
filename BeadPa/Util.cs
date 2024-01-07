@@ -8,13 +8,20 @@ namespace BeadPa
             Console.Clear();
         }
 
-        public static string Read()
+        public static string Read(string txt = "")
         {
+            PrintInLine(txt);
             return Console.ReadLine();
         }
 
-        public DateTime ReadDate()
+        public static void PrintInLine(string txt)
         {
+            Console.Write(txt);
+        }
+
+        public static DateTime ReadDate(string txt)
+        {
+            PrintInLine(txt);
             DateTime date;
             while (!DateTime.TryParse(Read(), out date))
             {
@@ -27,12 +34,20 @@ namespace BeadPa
             Console.WriteLine(txt);
         }
 
+        public static void Wait(string txt, ConsoleColor color)
+        {
+            Console.ForegroundColor = color;
+            Console.WriteLine(txt);
+            Console.ResetColor();
+            Console.ReadKey();
+        }
+
         public static void PrintList(List<Obj> list)
         {
             Console.WriteLine($"List objects:");
             foreach (var obj in list)
             {
-                obj.Hello();
+                obj.Self();
             }
         }
 

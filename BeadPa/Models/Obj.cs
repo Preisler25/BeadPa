@@ -7,7 +7,7 @@ namespace BeadPa
 
         public Obj(string name) => Name = name;
 
-		public void Hello() => Util.Print($"Hello, {Name}!");
+		public void Self() => Util.Print($"{Name}");
     }
 }
 

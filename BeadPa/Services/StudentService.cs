@@ -32,12 +32,15 @@ namespace BeadPa
             }
         }
 
-        public List<Student> ListAll()
+        public void ListAll()
         {
+            Util.Clear();
+            Console.WriteLine("List of Students:");
             foreach (var student in students)
             {
-                student.Hello();
+                student.Self();
             }
+            Util.Wait("Press any key to continue...", ConsoleColor.Green);
         }
     }
 }
