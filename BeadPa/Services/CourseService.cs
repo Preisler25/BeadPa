@@ -7,8 +7,10 @@ namespace BeadPa
 
         public void Add()
         {
+            Util.Clear();
             string name = Util.Read("Course name: ");
-            Course course = new Course(name);
+            string description = Util.Read("Course description: ");
+            Course course = new Course(name, description);
             Courses.Add(course);
         }
 
@@ -46,3 +48,4 @@ namespace BeadPa
             Util.Wait("Press any key to continue...", ConsoleColor.Green);
         }
     }
+}

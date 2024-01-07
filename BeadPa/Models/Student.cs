@@ -20,6 +20,11 @@ namespace BeadPa
         {
             return Grades.Count > 0 ? Grades.Average() : 0;
         }
+
+        public void Self()
+        {
+            Util.Print($"{Name} ({BirthDate.ToString("yyyy.MM.dd")})");
+        }
     }
 }
 

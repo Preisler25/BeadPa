@@ -6,6 +6,7 @@ namespace BeadPa{
         List<Instructor> Instructors { get; set; } = new List<Instructor>();
         public void Add()
         {
+            Util.Clear();
             string name = Util.Read("Instructor name: ");
             Instructor instructor = new Instructor(name);
             Instructors.Add(instructor);

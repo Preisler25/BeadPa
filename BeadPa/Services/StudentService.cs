@@ -7,6 +7,7 @@ namespace BeadPa
 
         public void Add()
         {
+            Util.Clear();
             string name = Util.Read("Name: ");
             DateTime birthDate = Util.ReadDate("Birth date (yyyy.mm.dd): ");
             Student student = new Student(name, birthDate);
@@ -16,8 +17,6 @@ namespace BeadPa
         public void Remove()
         {
             Util.Clear();
-            Util.Print("All student:");
-            listAll();
             string name = Util.Read("Name: ");
             students.RemoveAll(s => s.Name == name);
         }
@@ -25,8 +24,6 @@ namespace BeadPa
         public void Update()
         {
             Util.Clear();
-            Util.Print("All student:");
-            listAll();
             string name = Util.Read("Name: ");
             Student student = students.Find(s => s.Name == name);
             if (student != null)

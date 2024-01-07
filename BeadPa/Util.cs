@@ -10,7 +10,9 @@ namespace BeadPa
 
         public static string Read(string txt = "")
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
             PrintInLine(txt);
+            Console.ResetColor();
             return Console.ReadLine();
         }
 
@@ -21,7 +23,9 @@ namespace BeadPa
 
         public static DateTime ReadDate(string txt)
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
             PrintInLine(txt);
+            Console.ResetColor();
             DateTime date;
             while (!DateTime.TryParse(Read(), out date))
             {
