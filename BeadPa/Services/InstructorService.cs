@@ -26,8 +26,6 @@ namespace BeadPa{
         public void Remove()
         {
             Util.Clear();
-            Util.Print("All instructors:");
-            ListAll();
             string name = Util.Read("Instructor name: ");
             Instructors.RemoveAll(i => i.Name == name);
         }
@@ -35,8 +33,6 @@ namespace BeadPa{
         public void Update()
         {
             Util.Clear();
-            Util.Print("All instructors:");
-            ListAll();
             string name = Util.Read("Instructor name: ");
             Instructor instructor = Instructors.Find(i => i.Name == name);
             if (instructor != null)
